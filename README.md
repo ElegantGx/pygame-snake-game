@@ -14,8 +14,8 @@ py snake.py
 
 ## 游戏截图
 
-![游戏开始界面](start.png)
+![游戏开始界面](./Pictures/start.png)
 
-![设置](settings.png)
+![设置](./Pictures/settings.png)
 
 ![游戏结束](./Pictures/game_over.png)
