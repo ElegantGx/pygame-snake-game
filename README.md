@@ -6,7 +6,7 @@
 
 请确保环境中有Python3.14解释器，标准库(random, sys)和Pygame库
 
-复制文件snake.py到环境中，然后再终端中执行如下命令即可游玩
+复制文件snake.py到环境中，然后在终端中执行如下命令即可游玩
 
 ```
 py snake.py
