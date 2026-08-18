@@ -7,7 +7,7 @@
 ```
 pygame-snake-game/
 ├── snake.py          # 游戏主程序
-├── requirements.txt  # Python 依赖
+├── requirements.txt  # Python 依赖库
 ├── Pictures/         
 ├── LICENSE
 └── README.md
