@@ -85,4 +85,4 @@ py snake.py
 
 ## 许可证
 
-本项目使用![AGPL v3协议](./LICENSE)开源。
+本项目使用[AGPL v3协议](./LICENSE)开源。
