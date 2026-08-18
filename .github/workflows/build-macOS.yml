@@ -1,0 +1,35 @@
+name: Build macOS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Build
+        run: |
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+          pip install pyinstaller
+          pyinstaller --windowed --name=snake --icon=Pictures/icon/snake.icns snake.py  
+
+      - name: Create DMG
+        run: |
+          mkdir staging
+          cp -r dist/snake.app staging/
+          hdiutil create -volname "Snake" -srcfolder staging -ov -format UDZO snake.dmg
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-dmg
+          path: snake.dmg
