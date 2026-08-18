@@ -1,0 +1,33 @@
+name: Build Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          .\.venv\Scripts\python -m pip install --upgrade pip
+          .\.venv\Scripts\pip install -r requirements.txt
+          .\.venv\Scripts\pip install pyinstaller
+
+      - name: Build EXE
+        run: |
+          .\.venv\Scripts\pyinstaller --onefile --noconsole --name=snake --icon=Pictures/icons/icon.ico snake.py
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-exe
+          path: dist/snake.exe
