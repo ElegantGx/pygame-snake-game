@@ -20,7 +20,7 @@ jobs:
           source .venv/bin/activate
           pip install -r requirements.txt
           pip install pyinstaller
-          pyinstaller --windowed --name=snake --icon=Pictures/icon/snake.icns snake.py  
+          pyinstaller --windowed --name=snake --icon=Pictures/icons/snake.icns snake.py  
 
       - name: Create DMG
         run: |
