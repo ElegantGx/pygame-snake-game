@@ -8,14 +8,14 @@
 
 复制文件snake.py到环境中，然后再终端中执行如下命令即可游玩
 
-```sh
+```
 py snake.py
 ```
 
 ## 游戏截图
 
-![[start.png]]
+![游戏开始界面](start.png)
 
-![[settings.png]]
+![设置](settings.png)
 
-![[game_over.png]]
+![游戏结束](./Pictures/game_over.png)
