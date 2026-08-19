@@ -21,7 +21,7 @@ DIR_VECT = {UP: (0, -1), RIGHT: (1, 0), DOWN: (0, 1), LEFT: (-1, 0)}
 
 MODE_TRAD, MODE_LR = 0, 1
 SNAKE_SPEED = 10
-FPS_OPTS = [10, 30, 60]
+FPS_OPTS = [10, 30, 60, 90, 120]
 
 LANG_CN, LANG_EN = 0, 1
 
@@ -345,7 +345,7 @@ def help_screen(mode, lang):
 
 # ==================== 主菜单 ====================
 def main():
-    fps_idx = 0
+    fps_idx = FPS_OPTS.index(60)  # 默认帧率 60fps
     mode = MODE_TRAD
     lang = LANG_EN
 
