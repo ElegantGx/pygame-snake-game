@@ -25,7 +25,7 @@ jobs:
       - name: Create DMG
         run: |
           mkdir staging
-          cp -r dist/snake.app staging/
+          cp -R dist/snake.app staging/
           ln -s /Applications staging/Applications
           hdiutil create -volname "Snake" -srcfolder staging -ov -format UDZO snake.dmg
 
